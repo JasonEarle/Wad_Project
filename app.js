@@ -44,8 +44,8 @@ router.get('/get/html', function(req, res) {
     'Content-Type': 'text/html'
   });
 
-  var docSource = fs.readFileSync('Countries.xml', 'utf8');
-  var stylesheetSource = fs.readFileSync('Countries.xsl', 'utf8');
+  var docSource = fs.readFileSync('Movies.xml', 'utf8');
+  var stylesheetSource = fs.readFileSync('Movies.xsl', 'utf8');
 
   var doc = libxslt.libxmljs.parseXml(docSource);
   var stylesheet = libxslt.parse(stylesheetSource);
@@ -63,10 +63,10 @@ router.post('/post/json', function(req, res) {
   function appendJSON(obj) {
      console.log(obj);
     // Function to read in XML file, convert it to JSON, add a new object and write back to XML file
-    xmlFileToJs('Countries.xml', function(err, result) {
+    xmlFileToJs('Movies.xml', function(err, result) {
       if (err) throw (err);
-      result.countries.country.push(obj);
-      jsToXmlFile('Countries.xml', result, function(err) {
+      result.movies.movie.push(obj);
+      jsToXmlFile('Movies.xml', result, function(err) {
         if (err) console.log(err);
       })
     })
@@ -86,10 +86,11 @@ router.post('/post/delete', function(req, res) {
   // Function to read in a JSON file, add to it & convert to XML
   function deleteJSON(obj) {
     // Function to read in XML file, convert it to JSON, add a new object and write back to XML file
-    xmlFileToJs('Countries.xml', function(err, result) {
+    xmlFileToJs('Movies.xml', function(err, result) {
       if (err) throw (err);
       console.log(obj.row);
-      jsToXmlFile('Countries.xml', result, function(err) {
+      result.movies.movie.splice(obj.row-1,1);
+      jsToXmlFile('Movies.xml', result, function(err) {
         if (err) console.log(err);
       })
     })

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<movies>
+  <movie>
+    <name>Paranormal Activity</name>
+    <genre>Horror</genre>
+    <age>18</age>
+    <year_released>2012</year_released>
+  </movie>
+  <movie>
+    <name>Gravity</name>
+    <genre>Sci-Fi</genre>
+    <age>13</age>
+    <year_released>2016</year_released>
+  </movie>
+  <movie>
+    <name>Planet of the apes</name>
+    <genre>Fantasy</genre>
+    <age>15</age>
+    <year_released>2013</year_released>
+  </movie>
+  <movie>
+    <name>Daddy's home 2</name>
+    <genre>Comedy</genre>
+    <age>12</age>
+    <year_released>2017</year_released>
+  </movie>
+  <movie>
+    <name>Lord of the rings</name>
+    <genre>Adventure</genre>
+    <age>15</age>
+    <year_released>2001</year_released>
+  </movie>
+  <movie>
+    <name>Jurassic Park</name>
+    <genre>Sci-Fi</genre>
+    <age>13</age>
+    <year_released>1993</year_released>
+  </movie>
+  <movie>
+    <name>Minions</name>
+    <genre>Animated</genre>
+    <age>3</age>
+    <year_released>2015</year_released>
+  </movie>
+  <movie>
+    <name>Avatar</name>
+    <genre>Sci-Fi</genre>
+    <age>13</age>
+    <year_released>2009</year_released>
+  </movie>
+  <movie>
+    <name>Titanic</name>
+    <genre>Romantic</genre>
+    <age>15</age>
+    <year_released>1997</year_released>
+  </movie>
+</movies>

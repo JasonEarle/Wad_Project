@@ -2,7 +2,7 @@
 <html lang="en" ng-app>
 
 <head>
-  <title>World Countries and Capitals</title>
+  <title>Movies Database Lookup System</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
@@ -16,14 +16,15 @@
     th,
     td {
       border-collapse: collapse;
-      border: 1px solid black;
+      border: 3px solid black;
       text-align: center;
     }
     table {
+      background-color:grey;
       border-collapse: collapse;
     }
     td, th {
-      border: 1px solid #999;
+      border: 3px solid #999;
       padding: 0.5rem;
       text-align: left;
     }
@@ -33,6 +34,9 @@
     .selected {
       background-color:brown;
       color: #FFF;
+    }
+    body{
+    background-image: url('Mountains.jpg');
     }
   </style>
   <script src="/js/jquery.min.js"></script>
@@ -83,42 +87,44 @@
   </script>
 </head>
 
-<body>
+<body >
   <div class="container">
     <div class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
       </div>
     </div>
     <div class="page-header">
-      <h1>World Countries and Capitals</h1>
+      <img src="logo.png" alt="imdb" height=250px width=150px>
+      <h1>Movies Database</h1>
     </div>
     <div class="row">
-      <div id="results" class="span8">
+      <div id="results" class="span8"  >
+        
       </div>
-      <div class="span4">
+      <div class="span4" >
         <ul class="nav nav-list well">
           <li>
             <form enctype='application/json' action="/post/json" method="post">
               <div class="field">
-                <input type="text" name="Country_code" placeholder="Country code">
+                <input type="text" name="name" placeholder="name">
               </div>
               <div class="field">
-                <input type="text" name="Region" placeholder="Region">
+                <input type="text" name="genre" placeholder="genre">
               </div>
               <div class="field">
-                <input type="text" name="Name" placeholder="Name">
+                <input type="number" name="age" placeholder="age">
               </div>
               <div class="field">
-                <input type="text" name="Capital" placeholder="Capital">
-              </div>
-              <div class="field">
-                <input type="text" name="Phone_code" placeholder="Phone code">
+                <input type="number" name="year_released" placeholder="year_released">
               </div>
               <div class="field">
                 <button type="submit">Submit</button>
               </div>
             </form>
                 <button id="delete">Delete</button>
+                <button id="infoBtn" onClick="location.href="information.html</button>
+         
+            <a href="information.html" >Information</a>
           </li>
         </ul>
       </div>
